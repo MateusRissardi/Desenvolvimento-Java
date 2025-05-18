@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>130</x>
+      <y>40</y>
+      <w>440</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes>funcionarios
+--
+- nome : String
+- horaTrabalho : double
+- horaSalario: double
+- dependentes : int
+--
++setNome(nome : String) boolean
++getNome() : String
+
++setHoraTrabalho(horaTrabalho : double) : boolean
++getHoraTrabalho() : double
+
++setHoraSalario(horaSalario : double) : boolean
++getHoraSalario() : double
+
++setDependentes(dependentes : int) : boolean
++getDependentes() : int
+
++calcularSalarioBruto() : double
++calcularINSS() : double
++calcularIR() : double
++calcularSalarioLiquido() : double
++toString () : String</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>160</x>
+      <y>20</y>
+      <w>390</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes>Triangulo
+--
+- base : int
+- altura : int
+- cor : String
+- x : int
+- y : int
+--
++ Quadrado(cor : String, base : int, altura : int)
++ getCor() : String
++ setCor(cor : String) : boolean
++ getBase() : int
++ setBase(base : int) : boolean
++ getAltura() : int
++ setAltura(altura : int) : boolean
++ getX() : int
++ setX(x : int) : boolean
++ getY() : int
++ setY(y : int) : boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

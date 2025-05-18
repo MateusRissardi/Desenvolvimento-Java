@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <help_text>Circulo
+++</help_text>
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>50</x>
+      <y>50</y>
+      <w>300</w>
+      <h>290</h>
+    </coordinates>
+    <panel_attributes>Circulo
+--
+- cor : String
+- diametro : int
+- x : int
+- y : int
+--
++Circulo(cor: String, diametro: int)
++getCor() : String
++setCor(cor : String) : boolean
++getDiametro() : int
++setDiametro(diametro : int) : boolean
++getX() : int
++setX(x : int) : boolean
++getY() : int
++setY(y : int) : boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

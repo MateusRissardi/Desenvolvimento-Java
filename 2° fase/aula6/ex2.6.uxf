@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>406</x>
+      <y>105</y>
+      <w>322</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>Deputado
+--
+- matricula : int
+- nome : String
+- numPartido : int
+- estado : String
+--
++ Deputado (matricula : int, nome : String, estado : String, numPart : int)
++ getNome() : String
++ getMatricula() : int
++ getEstado() : String
++ setPartido(partido : int) : boolean
++ getPartido() : int
++ imprimirDeputado() : String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>42</x>
+      <y>126</y>
+      <w>266</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Comissao
+--
+- titulo : String
+--
++ Comissao (titulo : String)
++ getTitulo() : String
++ getDeputados() : ArrayList&lt;Deputado&gt;
++ getDeputados(numPartido : int) : ArayList&lt;Deputado&gt;
++ getDeputados(estado : String) : ArrayList&lt;Deputado&gt;
++ imprimirDep() : void
++ imprimirDep(numPart : int) : void
++ imprimirDep(estado : String) : void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>301</x>
+      <y>175</y>
+      <w>119</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+possui &gt;
+m2=1.*</panel_attributes>
+    <additional_attributes>10.0;20.0;150.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>252</x>
+      <y>427</y>
+      <w>147</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>_com1: Comissao_
+--
+titulo = "Justiça"</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>483</x>
+      <y>301</y>
+      <w>147</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>_dep1: Deputado_
+--
+matricula = 111
+nome = "Carlos Alberto"
+numPartido = 51
+estado = "RJ" </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>483</x>
+      <y>469</y>
+      <w>147</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>_dep3: Deputado_
+--
+matricula = 333
+nome = "Albos Carlerto"
+numPartido = 51
+estado = "RS" </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>483</x>
+      <y>385</y>
+      <w>147</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>_dep2: Deputado_
+--
+matricula = 222
+nome = "Alberto Carlos"
+numPartido = 32
+estado = "MG" </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>483</x>
+      <y>553</y>
+      <w>147</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>_dep4: Deputado_
+--
+matricula = 444
+nome = "Carlerto Albos"
+numPartido = 22
+estado = "SP" </panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

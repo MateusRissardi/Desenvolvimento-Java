@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>270</x>
+      <y>20</y>
+      <w>210</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>_circ2: Circulo_
+--
+diametro = 95
+cor = "green"
+x = 30
+y = 50</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>20</y>
+      <w>210</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>_circ1: Circulo_
+--
+diametro = 45
+cor = "yellow"
+x = 40
+y = 40</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

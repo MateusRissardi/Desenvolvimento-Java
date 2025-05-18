@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>20</y>
+      <w>560</w>
+      <h>480</h>
+    </coordinates>
+    <panel_attributes>Estudante
+--
+- nome : String
+- matricula : int
+- creditos : int
+--
+/*a) não é possível usar o set, por isso será usado um construtor*/
+
++ Estudante (matricula : int)
++ getMatricula() : int
++ setNome(nome : String) : boolean
++ getNome() : String
+
+/*b) deve-se apenas adicionar créditos, não podendo setar*/
+/*quantidade é uma variavel apenas*/
+
++ addCreditos (quantidade : int) : boolean
++ getCreditos () : boolean
+
+/*c) dados derivados do nome e atributo*/
+/*apenas precisa de argumentos quando ele não tem uma informação que precisa*/
+
+calcularLogin () : String
+
+/*d) representação textual (print eu acho)*/
+/*representação textual é o conceito que representa o objeto*/
+
+toString() : String</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>60</x>
+      <y>30</y>
+      <w>330</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>Quadrado
+--
+- cor : String
+- lado : int
+- x : int
+- y : int
+--
++ Quadrado(cor : String, lado : int)
++ getCor() : String
++ setCor(cor : String) : boolean
++ getLado() : int
++ setLado(lado : int) : boolean
++ getX() : int
++ setX(x : int) : boolean
++ getY() : int
++ setY(y : int) : boolean
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
