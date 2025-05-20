@@ -6,55 +6,24 @@ import java.util.ArrayList;
  */
 public class Catalogo{
     private String colecionador;
-    private ArrayList<Album> albuns;
-    private ArrayList<Filme> filmes;
-    private ArrayList<Jogo> jogos;
+    private ArrayList<Item> itens;
 
     public Catalogo(String colecionador){
         this.colecionador = colecionador;
-        this.albuns = new ArrayList<Album>();
-        this.filmes = new ArrayList<Filme>();
-        this.jogos = new ArrayList<Jogo>();
+        this.itens = new ArrayList<Item>();
     }
 
-    public void addAlbum(Album umAlbum){
-        this.albuns.add(umAlbum);
-    }
-
-    public void addFilme(Filme umFilme){
-        this.filmes.add(umFilme);
-    }
-    
-    public void addJogo(Jogo umJogo){
-        this.jogos.add(umJogo);
+    public void addItem(Item umItem){
+        this.itens.add(umItem);
     }
 
     public String toString(){
         String texto = "Colecionador: "+this.colecionador+"\n";
         texto += "Albuns: \n";
-        for(Album alb: albuns){
-            texto += "Titulo: "+alb.getTitulo()+", "+
-            "Artista: "+alb.getArtista()+", "+
-            "Faixas: "+alb.getFaixas()+", "+
-            "Duracao: "+alb.getDuracao()+", "+
-            "Comentario: "+alb.getComentario()+"\n";
-        }
-
-        texto += "Filmes:\n";
-        for(Filme fil : filmes){
-            texto += "Titulo: "+fil.getTitulo()+", "+
-            "Diretor: "+fil.getDiretor()+", "+
-            "Duracao: "+fil.getDuracao()+", "+
-            "Comentario: "+fil.getComentario()+"\n";
-        }
-        
-        texto += "Jogos:\n";
-        for(Jogo jog: jogos){
-            texto += "Titulo: "+jog.getTitulo()+", "+
-            "Quantidade de jogadores: "+jog.getQuantJogadores()+", "+
-            "Plataforma: "+jog.getPlataforma()+", "+            
-            "Duracao: "+jog.getDuracao()+", "+
-            "Comentario: "+jog.getComentario()+"\n";
+        for(Item it: this.itens){
+            texto += "Titulo: "+it.getTitulo()+", "+
+            "Duracao: "+it.getDuracao()+", "+
+            "Comentario: "+it.getComentario()+"\n";
         }
         return texto;
     }

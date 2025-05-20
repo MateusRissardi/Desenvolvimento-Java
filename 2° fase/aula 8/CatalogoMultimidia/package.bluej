@@ -1,13 +1,7 @@
 #BlueJ package file
 dependency1.from=Catalogo
-dependency1.to=Album
+dependency1.to=Item
 dependency1.type=UsesDependency
-dependency2.from=Catalogo
-dependency2.to=Filme
-dependency2.type=UsesDependency
-dependency3.from=Catalogo
-dependency3.to=Jogo
-dependency3.type=UsesDependency
 editor.fx.0.height=739
 editor.fx.0.width=816
 editor.fx.0.x=552
@@ -22,7 +16,7 @@ package.editor.x=722
 package.editor.y=126
 package.frame.height=758
 package.frame.width=1074
-package.numDependencies=3
+package.numDependencies=1
 package.numTargets=5
 package.showExtends=true
 package.showUses=true
