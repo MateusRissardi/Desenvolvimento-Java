@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>144</x>
+      <y>424</y>
+      <w>176</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>Catalogo
+--
+- colecionador: String
+--
++ Catalogo(colecionador: String)
++ toString(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>488</x>
+      <y>320</y>
+      <w>120</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>Filme
+--
+- diretor: String
+--
++ gets() e sets()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>352</x>
+      <y>320</y>
+      <w>120</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>Album
+--
+- artista: String
+- faixas: int
+--
++ gets() e sets()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>384</y>
+      <w>128</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m2=*
+armazena &gt;</panel_attributes>
+    <additional_attributes>10.0;90.0;120.0;90.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>368</y>
+      <w>248</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m2=*
+armazena &gt;</panel_attributes>
+    <additional_attributes>10.0;130.0;290.0;130.0;290.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>424</x>
+      <y>96</y>
+      <w>120</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>Item
+--
+- titulo: String
+- duracao: double
+- comentario: String
+--
++ gets() e sets()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>408</x>
+      <y>200</y>
+      <w>80</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>472</x>
+      <y>200</y>
+      <w>88</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>72</x>
+      <y>104</y>
+      <w>216</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>_album1 : Album_
+--
+titulo = "Traumas e Vícios"
+duracao = 60
+comentario = "Bom album"
+artista = "CJ"
+faixas = 12</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
