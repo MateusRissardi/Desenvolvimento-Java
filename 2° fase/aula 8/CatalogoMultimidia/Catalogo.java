@@ -12,6 +12,10 @@ public class Catalogo{
         this.colecionador = colecionador;
         this.itens = new ArrayList<Item>();
     }
+    
+    public ArrayList<Item> getItens(){
+        return this.itens;
+    }
 
     public void addItem(Item umItem){
         this.itens.add(umItem);
@@ -19,11 +23,8 @@ public class Catalogo{
 
     public String toString(){
         String texto = "Colecionador: "+this.colecionador+"\n";
-        texto += "Albuns: \n";
         for(Item it: this.itens){
-            texto += "Titulo: "+it.getTitulo()+", "+
-            "Duracao: "+it.getDuracao()+", "+
-            "Comentario: "+it.getComentario()+"\n";
+            texto += it.toString();
         }
         return texto;
     }

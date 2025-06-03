@@ -1,12 +1,16 @@
 #BlueJ class context
 comment0.target=Album
 comment0.text=\r\n\ Classe\ que\ representa\ um\ Album\ Musical.\r\n\ @author\ Fernando\ Santos\r\n
-comment1.params=
-comment1.target=java.lang.String\ getArtista()
-comment2.params=artista
-comment2.target=boolean\ setArtista(java.lang.String)
-comment3.params=
-comment3.target=int\ getFaixas()
-comment4.params=faixas
-comment4.target=boolean\ setFaixas(int)
-numComments=5
+comment1.params=titulo\ duracao\ comentario\ artista\ faixas
+comment1.target=Album(java.lang.String,\ double,\ java.lang.String,\ java.lang.String,\ int)
+comment2.params=
+comment2.target=java.lang.String\ getArtista()
+comment3.params=artista
+comment3.target=boolean\ setArtista(java.lang.String)
+comment4.params=
+comment4.target=int\ getFaixas()
+comment5.params=faixas
+comment5.target=boolean\ setFaixas(int)
+comment6.params=
+comment6.target=java.lang.String\ toString()
+numComments=7
