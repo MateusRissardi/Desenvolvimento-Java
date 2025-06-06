@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Veiculo
+comment1.params=modelo
+comment1.target=boolean\ setModelo(java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getModelo()
+comment3.params=ano
+comment3.target=boolean\ setAno(int)
+comment4.params=
+comment4.target=int\ getAno()
+comment5.params=placa
+comment5.target=boolean\ setPlaca(java.lang.String)
+comment6.params=
+comment6.target=java.lang.String\ getPlaca()
+comment7.params=valor
+comment7.target=boolean\ setValor(double)
+comment8.params=
+comment8.target=double\ getValor()
+comment9.params=
+comment9.target=java.lang.String\ toString()
+numComments=10
