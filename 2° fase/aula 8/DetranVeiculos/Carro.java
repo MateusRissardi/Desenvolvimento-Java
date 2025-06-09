@@ -1,8 +1,7 @@
 public class Carro extends Veiculo
 {
     private int portas;
-    private double ipva;
-    
+    private boolean ehParticular;
     public boolean setPortas(int portas){
         if(portas>0){
             this.portas = portas;
@@ -17,9 +16,26 @@ public class Carro extends Veiculo
         return this.portas;
     }
     
-    public double calcularIPVA(boolean ehParticular){
+    public boolean setEhParticular(boolean ehParticular){
         if(ehParticular == true){
-            this.ipva = this.valor *0.02;
+            this.ehParticular = true;
+            return true;
+        }
+        else{
+            this.ehParticular = false;
+            return false;
+        }
+    }
+    
+    public boolean getEhParticular(){
+        return this.ehParticular;
+    }
+    
+    @Override
+    public double calcularIPVA(){
+        this.ipva = super.calcularIPVA();
+        if(this.ehParticular == true){
+            this.ipva = this.ipva;
         }
         else{
             this.ipva = this.valor *0.01;

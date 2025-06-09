@@ -57,7 +57,12 @@ public class Anuncio
         }
     }
     
-    public String setEstado(){
+    public String getEstado(){
         return this.estado;
+    }
+    
+    public String toString(){
+        return "Produto: " + this.produto + ", Valor de Venda: R$" + this.valorVenda +
+        ", Cidade: " + this.cidade + ", Estado: "+  this.estado;
     }
 }

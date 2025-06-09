@@ -1,7 +1,6 @@
 public class Moto extends Veiculo
 {
     private int cilindradas;
-    private double ipva;
     
     public boolean setCilindradas(int cilindradas){
         if(cilindradas > 0){
@@ -17,9 +16,11 @@ public class Moto extends Veiculo
         return this.cilindradas;
     }
     
+    @Override
     public double calcularIPVA(){
+        this.ipva = super.calcularIPVA();
         if(this.cilindradas>200){
-            this.ipva = this.valor * 0.02;
+            this.ipva = this.ipva;
         }
         else{
             this.ipva = 0;

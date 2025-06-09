@@ -1,26 +1,39 @@
 public class AnuncioPago extends Anuncio
 {
-    // variáveis de instância - substitua o exemplo abaixo pelo seu próprio
-    private int x;
-
-    /**
-     * Construtor para objetos da classe AnuncioPago
-     */
-    public AnuncioPago()
-    {
-        // inicializa variáveis de instância
-        x = 0;
+    private int quantDias;
+    private double valor;
+    
+    public boolean setQuantDias(int quantDias){
+        if(quantDias>=1){
+            this.quantDias = quantDias;
+            return true;
+        }
+        else{
+            return false;
+        }
     }
-
-    /**
-     * Um exemplo de um método - substitua este comentário pelo seu próprio
-     * 
-     * @param  y   um exemplo de um parâmetro de método
-     * @return     a soma de x e y 
-     */
-    public int sampleMethod(int y)
-    {
-        // escreva seu código aqui
-        return x + y;
+    
+    public int getQuantDias(){
+        return this.quantDias;
+    }
+    
+    public boolean setValor(double valor){
+        if(valor>0){
+            this.valor = valor;
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    
+    public double getValor(){
+        return this.valor;
+    }
+    
+    @Override
+    public String toString(){
+        return super.toString() + ", Quantidade de Dias: " + this.quantDias + 
+        ", Valor: R$" + this.valor;
     }
 }

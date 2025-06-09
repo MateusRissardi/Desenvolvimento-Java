@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=AnuncioPago
+comment1.params=quantDias
+comment1.target=boolean\ setQuantDias(int)
+comment2.params=
+comment2.target=int\ getQuantDias()
+comment3.params=valor
+comment3.target=boolean\ setValor(double)
+comment4.params=
+comment4.target=double\ getValor()
+comment5.params=
+comment5.target=java.lang.String\ toString()
+numComments=6

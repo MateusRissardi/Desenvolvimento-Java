@@ -5,6 +5,7 @@ public class Veiculo
     protected int ano;
     protected String placa;
     protected double valor;
+    protected double ipva;
     protected DecimalFormat df = new DecimalFormat("#.00");
     
     public boolean setModelo(String modelo){
@@ -63,8 +64,13 @@ public class Veiculo
         return this.valor;
     }
     
+    public double calcularIPVA(){
+        this.ipva = valor * 0.02;
+        return this.ipva;
+    }
+    
     public String toString(){
         return "Modelo: " + this.modelo + ", Ano: " + this.ano + 
-        " , Placa: " + this.placa + ", Valor: R$" + df.format(this.valor); 
+        " , Placa: " + this.placa + ", Valor: R$" + df.format(this.valor) + ", IPVA: R$" + this.df.format(this.ipva); 
     }
 }

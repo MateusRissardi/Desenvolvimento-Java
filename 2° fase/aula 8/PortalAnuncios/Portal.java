@@ -14,4 +14,16 @@ public class Portal
     public void addAnuncio(Anuncio umAnun){
         this.anuncios.add(umAnun);
     }
+    
+    public ArrayList<Anuncio> getAnuncios(){
+        return this.anuncios;
+    }
+    
+    public String toString(){
+        String texto = "Nome: " + this.nome + ", URL : " + this.url + "\n";
+        for (Anuncio umAnun : this.anuncios){
+            texto += umAnun.toString() + "\n";
+        }
+        return texto;
+    }
 }
