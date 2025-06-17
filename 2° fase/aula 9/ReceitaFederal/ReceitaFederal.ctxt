@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=ReceitaFederal
+comment1.params=
+comment1.target=ReceitaFederal()
+comment2.params=umaPess
+comment2.target=void\ addPessoas(Pessoas)
+comment3.params=
+comment3.target=java.util.ArrayList\ getPessoas()
+comment4.params=
+comment4.target=void\ imprimirContribuintesDadosBasicos()
+comment5.params=
+comment5.target=void\ imprimirContribuintesCompletos()
+numComments=6

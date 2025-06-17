@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Juridica
+comment1.params=nome\ endere\u00E7o\ cnpj\ faturamento\ enquadramento
+comment1.target=Juridica(java.lang.String,\ java.lang.String,\ java.lang.String,\ double,\ int)
+comment2.params=
+comment2.target=java.lang.String\ getCNPJ()
+comment3.params=faturamento
+comment3.target=boolean\ setFaturamento(double)
+comment4.params=
+comment4.target=double\ getFaturamento()
+comment5.params=enquadramento
+comment5.target=boolean\ setEnquadramento(int)
+comment6.params=
+comment6.target=int\ getEnquadramento()
+comment7.params=
+comment7.target=double\ calcImposto()
+comment8.params=
+comment8.target=java.lang.String\ toString()
+numComments=9
