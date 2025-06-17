@@ -1,8 +1,14 @@
 public class Item
 {
-    private String titulo;
-    private double duracao;
-    private String comentario;
+    protected String titulo;
+    protected double duracao;
+    protected String comentario;
+    
+    public Item(String titulo, double duracao, String comentario){
+        this.titulo = titulo;
+        this.duracao = duracao;
+        this.comentario = comentario;
+    }
     
     public String getTitulo() {
         return this.titulo;
@@ -41,6 +47,14 @@ public class Item
         }else{
             return false;
         }
+    }
+    
+    public String toString(){
+        String texto = "";
+        texto += "Titulo: "+this.titulo+", "+
+            "Duracao: "+this.duracao+", "+
+            "Comentario: "+this.comentario+ ", ";
+        return texto;
     }
 }
 

@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Anuncio
+comment1.params=produto
+comment1.target=boolean\ setProduto(java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getProduto()
+comment3.params=valorVenda
+comment3.target=boolean\ setValorVenda(double)
+comment4.params=
+comment4.target=double\ getValorVenda()
+comment5.params=cidade
+comment5.target=boolean\ setCidade(java.lang.String)
+comment6.params=
+comment6.target=java.lang.String\ getCidade()
+comment7.params=estado
+comment7.target=boolean\ setEstado(java.lang.String)
+comment8.params=
+comment8.target=java.lang.String\ getEstado()
+comment9.params=
+comment9.target=java.lang.String\ toString()
+numComments=10
