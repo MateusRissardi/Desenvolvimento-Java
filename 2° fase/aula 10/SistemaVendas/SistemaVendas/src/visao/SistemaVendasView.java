@@ -23,7 +23,13 @@ public class SistemaVendasView extends javax.swing.JFrame {
      * Creates new form SistemaVendasView
      */
     public SistemaVendasView() {
+        this.categorias = new ArrayList<Categoria>();
+        this.produtos = new ArrayList<Produto>();
         initComponents();
+    }
+    
+    public ArrayList<Categoria> getCategorias(){
+        return this.categorias;
     }
 
     /**
@@ -61,9 +67,19 @@ public class SistemaVendasView extends javax.swing.JFrame {
         mnCadastro.setText("Cadastro");
 
         miCadastroCategoria.setText("Categoria");
+        miCadastroCategoria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miCadastroCategoriaActionPerformed(evt);
+            }
+        });
         mnCadastro.add(miCadastroCategoria);
 
         miCadastroProduto.setText("Produto");
+        miCadastroProduto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miCadastroProdutoActionPerformed(evt);
+            }
+        });
         mnCadastro.add(miCadastroProduto);
 
         mbSistemaVendas.add(mnCadastro);
@@ -71,9 +87,19 @@ public class SistemaVendasView extends javax.swing.JFrame {
         mnRelatorio.setText("Relatório");
 
         miRelatorioCategoria.setText("Categoria");
+        miRelatorioCategoria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miRelatorioCategoriaActionPerformed(evt);
+            }
+        });
         mnRelatorio.add(miRelatorioCategoria);
 
         miRelatorioProduto.setText("Produto");
+        miRelatorioProduto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miRelatorioProdutoActionPerformed(evt);
+            }
+        });
         mnRelatorio.add(miRelatorioProduto);
 
         mbSistemaVendas.add(mnRelatorio);
@@ -93,6 +119,30 @@ public class SistemaVendasView extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void miCadastroCategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miCadastroCategoriaActionPerformed
+        // Criar o objeto da view que será exibido
+        CadastroCategoriaView cadCategoriaView = new CadastroCategoriaView(this);
+        // Exibir a view
+        cadCategoriaView.setVisible(true);
+    }//GEN-LAST:event_miCadastroCategoriaActionPerformed
+
+    private void miCadastroProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miCadastroProdutoActionPerformed
+        // Criar o objeto da view que será exibido
+        CadastroProdutoView cadProdutoView = new CadastroProdutoView();
+        // Exibir a view
+        cadProdutoView.setVisible(true);
+    }//GEN-LAST:event_miCadastroProdutoActionPerformed
+
+    private void miRelatorioCategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miRelatorioCategoriaActionPerformed
+        RelatorioCategoriasView relCategoriasView = new RelatorioCategoriasView(this);
+        relCategoriasView.setVisible(true);
+    }//GEN-LAST:event_miRelatorioCategoriaActionPerformed
+
+    private void miRelatorioProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miRelatorioProdutoActionPerformed
+        RelatorioProdutosView relProdutosView = new RelatorioProdutosView();
+        relProdutosView.setVisible(true);
+    }//GEN-LAST:event_miRelatorioProdutoActionPerformed
 
     /**
      * @param args the command line arguments

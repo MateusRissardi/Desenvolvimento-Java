@@ -6,24 +6,21 @@ package visao;
 
 import java.util.ArrayList;
 import modelo.Categoria;
-import modelo.Produto;
 
 /**
  *
  * @author mateu
  */
 public class CadastroCategoriaView extends javax.swing.JFrame {
-    private ArrayList<Categoria> categorias;
-    private ArrayList<Produto> produtos;
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(CadastroCategoriaView.class.getName());
+    private SistemaVendasView sistemaView;
 
     /**
      * Creates new form CadastroCategoriaView
      */
-    public CadastroCategoriaView() {
-        this.categorias = new ArrayList<Categoria>();
-        this.produtos = new ArrayList<Produto>();
+    public CadastroCategoriaView(SistemaVendasView sistVendasView) {
+        sistemaView = sistVendasView;
         initComponents();
     }
 
@@ -54,6 +51,11 @@ public class CadastroCategoriaView extends javax.swing.JFrame {
         tfNome.setText("ABC");
 
         btSalvar.setText("Salvar");
+        btSalvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btSalvarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -96,30 +98,17 @@ public class CadastroCategoriaView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalvarActionPerformed
+        int cod = Integer.parseInt(tfCodigo.getText());
+        String nome = tfNome.getText();
+        
+        Categoria umCat = new Categoria(cod, nome);
+        this.sistemaView.getCategorias().add(umCat);
+    }//GEN-LAST:event_btSalvarActionPerformed
+
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
-            logger.log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new CadastroCategoriaView().setVisible(true));
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btSalvar;

@@ -33,11 +33,11 @@
                           <Component id="lbCodigo" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <Group type="102" alignment="1" attributes="0">
+                  <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="lbCategoria" min="-2" pref="54" max="-2" attributes="0"/>
-                          <Component id="lbValor" min="-2" pref="37" max="-2" attributes="0"/>
+                          <Component id="lbValor" alignment="1" min="-2" pref="37" max="-2" attributes="0"/>
+                          <Component id="lbCategoria" min="-2" pref="62" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -45,10 +45,10 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="spDescricao" alignment="0" pref="282" max="32767" attributes="0"/>
+                          <Component id="spDescricao" alignment="0" pref="249" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
                               <Component id="tfCodigo" min="-2" pref="71" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="211" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="178" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
