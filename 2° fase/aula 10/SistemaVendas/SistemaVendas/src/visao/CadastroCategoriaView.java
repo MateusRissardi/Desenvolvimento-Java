@@ -5,6 +5,7 @@
 package visao;
 
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 import modelo.Categoria;
 
 /**
@@ -104,6 +105,9 @@ public class CadastroCategoriaView extends javax.swing.JFrame {
         
         Categoria umCat = new Categoria(cod, nome);
         this.sistemaView.getCategorias().add(umCat);
+        JOptionPane.showMessageDialog(null, "Categoria adicionado com sucesso!");
+        tfCodigo.setText("");
+        tfNome.setText("");
     }//GEN-LAST:event_btSalvarActionPerformed
 
     /**

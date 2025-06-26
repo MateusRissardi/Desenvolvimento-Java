@@ -31,6 +31,10 @@ public class SistemaVendasView extends javax.swing.JFrame {
     public ArrayList<Categoria> getCategorias(){
         return this.categorias;
     }
+    
+    public ArrayList<Produto> getProdutos(){
+        return this.produtos;
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -129,7 +133,7 @@ public class SistemaVendasView extends javax.swing.JFrame {
 
     private void miCadastroProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miCadastroProdutoActionPerformed
         // Criar o objeto da view que será exibido
-        CadastroProdutoView cadProdutoView = new CadastroProdutoView();
+        CadastroProdutoView cadProdutoView = new CadastroProdutoView(this);
         // Exibir a view
         cadProdutoView.setVisible(true);
     }//GEN-LAST:event_miCadastroProdutoActionPerformed
@@ -140,13 +144,10 @@ public class SistemaVendasView extends javax.swing.JFrame {
     }//GEN-LAST:event_miRelatorioCategoriaActionPerformed
 
     private void miRelatorioProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miRelatorioProdutoActionPerformed
-        RelatorioProdutosView relProdutosView = new RelatorioProdutosView();
+        RelatorioProdutosView relProdutosView = new RelatorioProdutosView(this);
         relProdutosView.setVisible(true);
     }//GEN-LAST:event_miRelatorioProdutoActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -168,6 +169,10 @@ public class SistemaVendasView extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new SistemaVendasView().setVisible(true));
     }
+    
+    /**
+     * @param args the command line arguments
+     */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;

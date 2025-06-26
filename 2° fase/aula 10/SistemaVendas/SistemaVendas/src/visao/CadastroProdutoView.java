@@ -4,7 +4,9 @@
  */
 package visao;
 
+import javax.swing.JOptionPane;
 import modelo.Categoria;
+import modelo.Produto;
 
 /**
  *
@@ -12,13 +14,17 @@ import modelo.Categoria;
  */
 public class CadastroProdutoView extends javax.swing.JFrame {
     
+    SistemaVendasView sistemaView;
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(CadastroProdutoView.class.getName());
 
     /**
      * Creates new form CadastroProdutoView
      */
-    public CadastroProdutoView() {
+    public CadastroProdutoView(SistemaVendasView sistemaView) {
         initComponents();
+        this.sistemaView = sistemaView;
+        for (Categoria umCat : this.sistemaView.getCategorias())
+            cbCategoria.addItem(umCat);
     }
 
     /**
@@ -61,6 +67,11 @@ public class CadastroProdutoView extends javax.swing.JFrame {
         tfValor.setText("0.00");
 
         btSalvar.setText("Salvar");
+        btSalvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btSalvarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -93,7 +104,7 @@ public class CadastroProdutoView extends javax.swing.JFrame {
                         .addComponent(btSalvar)
                         .addGap(22, 22, 22))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(cbCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(cbCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
@@ -127,30 +138,26 @@ public class CadastroProdutoView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalvarActionPerformed
+        int cod = Integer.parseInt(tfCodigo.getText());
+        String desc = taDescricao.getText();
+        Categoria categ = cbCategoria.getItemAt(cbCategoria.getSelectedIndex());
+        double valor = Double.parseDouble(tfValor.getText());
+        
+        Produto umProd = new Produto(cod, desc, valor);
+        umProd.setCategoria(categ);
+        
+        this.sistemaView.getProdutos().add(umProd);
+        
+        JOptionPane.showMessageDialog(null, "Produto cadastrado com sucesso!");
+        tfCodigo.setText("");
+        taDescricao.setText("");
+        tfValor.setText("");
+    }//GEN-LAST:event_btSalvarActionPerformed
+
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
-            logger.log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new CadastroProdutoView().setVisible(true));
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btSalvar;
